@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>2048</title>
+    <link rel="stylesheet" href="2048.css">
+</head>
+<body>
+
+<h1>2048</h1>
+
+<div class="info">
+    <div class="box">Scor<br><span id="score">0</span></div>
+    <div class="box">Best<br><span id="best">0</span></div>
+    <div class="box">Timp<br><span id="timer">0</span>s</div>
+</div>
+
+<div class="buttons">
+    <button class="start" onclick="startGame()">Start</button>
+    <button class="pause" onclick="pauseGame()" id="pauseBtn">Pause</button>
+    <button class="restart" onclick="restartGame()">Restart</button>
+    <button class="undo" onclick="undo()">Undo</button>
+    <button class="save" onclick="saveGame()">Save</button>
+    <button class="load" onclick="loadGame()">Load</button>
+</div>
+
+<div id="grid"></div>
+
+<div id="pauseOverlay">PAUZĂ</div>
+
+<script src="2048.js"></script>
+</body>
+</html>

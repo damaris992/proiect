@@ -1,0 +1,122 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffe6f0, #ffccdd);
+}
+
+/* titlu */
+h1 {
+    color: #cc0066;
+}
+
+/* info */
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.box {
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    width: 80px;
+    font-weight: bold;
+    color: #cc0066;
+
+    /* margine */
+    border: 2px solid #ff99cc;
+}
+
+/* butoane */
+.buttons {
+    margin-top: 15px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: 2px solid white; /* margine */
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+/* forme diferite */
+.start { background: #ff66b2; border-radius: 20px; }
+.restart { background: #ff3385; border-radius: 50px; }
+.undo { background: #ff99cc; border-radius: 10px; }
+.save { background: #ff4da6; border-radius: 30px; }
+.load { background: #e60073; border-radius: 50%; width: 60px; height: 40px; }
+
+/* grid */
+#grid {
+    width: 260px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 5px;
+
+    background: #cc0066; /* 👈 aceeași culoare ca bordura */
+    padding: 5px;
+
+    border: 4px solid #cc0066;
+    border-radius: 10px;
+}
+
+/* celule */
+.cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 10px;
+
+    /* margine la fiecare pătrat */
+    border: 2px solid white;
+}
+
+.pause {
+    background: #ff1a8c;
+    border-radius: 25px;
+}
+
+/* culori */
+.x2 { background: #ffe6f2; }
+.x4 { background: #ffccdd; }
+.x8 { background: #ffb3d9; }
+.x16 { background: #ff99cc; }
+.x32 { background: #ff80bf; }
+.x64 { background: #ff66b2; }
+.x128 { background: #ff4da6; color: white; }
+.x256 { background: #ff3385; color: white; }
+.x512 { background: #e60073; color: white; }
+.x1024 { background: #cc005f; color: white; }
+.x2048 { background: #99004d; color: white; }
+
+/* bombă */
+.bomb {
+    background: black;
+    color: white;
+}
+
+#pauseOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+}
