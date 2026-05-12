@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <title>2048</title>
-    <link rel="stylesheet" href="2048.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✨ 2048 Pink Edition ✨</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<h1>2048</h1>
+<h1 class="title">✨ 2048 Pink Edition ✨</h1>
 
-<div class="info">
-    <div class="box">Scor<br><span id="score">0</span></div>
-    <div class="box">Best<br><span id="best">0</span></div>
-    <div class="box">Timp<br><span id="timer">0</span>s</div>
+<div class="top-bar">
+  <div>Score: <span id="score">0</span></div>
+  <div>Best: <span id="best">0</span></div>
+  <div>Time: <span id="timer">0</span>s</div>
+  <div>Level: <span id="level">1</span></div>
 </div>
 
-<div class="buttons">
-    <button class="start" onclick="startGame()">Start</button>
-    <button class="pause" onclick="pauseGame()" id="pauseBtn">Pause</button>
-    <button class="restart" onclick="restartGame()">Restart</button>
-    <button class="undo" onclick="undo()">Undo</button>
-    <button class="save" onclick="saveGame()">Save</button>
-    <button class="load" onclick="loadGame()">Load</button>
+<div id="controls">
+<button onclick="startGame()">▶ Start</button>
+<button onclick="pauseGame()">⏸ Pause</button>
+<button onclick="undoMove()">↩ Undo</button>
+<button onclick="saveGame()">💾 Save</button>
+<button onclick="loadGame()">🔄 Load</button>
 </div>
 
-<div id="grid"></div>
+<div id="game-wrapper">
+  <div class="grid" id="grid"></div>
+</div>
 
-<div id="pauseOverlay">PAUZĂ</div>
+<div class="overlay" id="pauseScreen" onclick="pauseGame()">
+  <div class="pause-box" onclick="event.stopPropagation()">
+    <h2>Paused</h2>
+    <button onclick="pauseGame()">▶ Resume</button>
+  </div>
+</div>
 
-<script src="2048.js"></script>
+<div class="overlay" id="gameOverScreen">
+  <div class="gameover-box">
+    <div class="gameover-title">GAME OVER</div>
+    <button onclick="startGame()">Retry</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
