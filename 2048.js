@@ -14,9 +14,9 @@ let history = [];
 
 const SIZE = 4;
 
-/* =========================
+/*
    CREARE TABLĂ
-========================= */
+ */
 
 function createGrid() {
 
@@ -26,9 +26,9 @@ function createGrid() {
 
 }
 
-/* =========================
+/* 
    DESENARE TABLĂ
-========================= */
+*/
 
 function drawGrid() {
 
@@ -77,9 +77,9 @@ function drawGrid() {
 
 }
 
-/* =========================
+/* 
    TILE RANDOM
-========================= */
+ */
 
 function randomTile() {
 
@@ -120,9 +120,9 @@ function randomTile() {
 
 }
 
-/* =========================
+/*
    LOGICĂ RÂND
-========================= */
+ */
 
 function operate(row) {
 
@@ -245,9 +245,9 @@ function operate(row) {
   return result;
 }
 
-/* =========================
+/* 
    ROTIRE MATRICE
-========================= */
+ */
 
 function rotateClockwise(mat) {
 
@@ -268,9 +268,9 @@ function rotateClockwise(mat) {
   return res;
 }
 
-/* =========================
+/* 
    MUTARE
-========================= */
+ */
 
 function move(dir) {
 
@@ -337,9 +337,9 @@ function move(dir) {
 
 }
 
-/* =========================
+/*
    ZID FIX
-========================= */
+ */
 
 function addWall() {
 
@@ -371,9 +371,9 @@ function addWall() {
 
 }
 
-/* =========================
+/* 
    GAME OVER
-========================= */
+*/
 
 function checkGameOver() {
 
@@ -461,9 +461,9 @@ function checkGameOver() {
 
 }
 
-/* =========================
+/* 
    WIN
-========================= */
+ */
 
 function checkWin() {
 
@@ -495,9 +495,9 @@ function showWin() {
 
 }
 
-/* =========================
+/* 
    UI
-========================= */
+ */
 
 function updateUI() {
 
@@ -517,9 +517,9 @@ function updateUI() {
 
 }
 
-/* =========================
+/* 
    START GAME
-========================= */
+ */
 
 function startGame() {
 
@@ -567,9 +567,9 @@ function startGame() {
 
 }
 
-/* =========================
+/* 
    PAUSE
-========================= */
+ */
 
 function pauseGame() {
 
@@ -580,9 +580,9 @@ function pauseGame() {
 
 }
 
-/* =========================
+/* 
    UNDO
-========================= */
+ */
 
 function undoMove() {
 
@@ -602,9 +602,9 @@ function undoMove() {
 
 }
 
-/* =========================
+/* 
    SAVE
-========================= */
+ */
 
 function saveGame() {
 
@@ -621,9 +621,9 @@ function saveGame() {
 
 }
 
-/* =========================
+/*
    LOAD
-========================= */
+ */
 
 function loadGame() {
 
@@ -671,9 +671,9 @@ function loadGame() {
 
 }
 
-/* =========================
+/* 
    CONTROALE
-========================= */
+ */
 
 window.addEventListener("keydown", e => {
 
